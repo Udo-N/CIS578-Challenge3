@@ -83,7 +83,7 @@ void OrderBeverageServiceHandler::PlaceOrder(std::string& _return, const int64_t
    if (!beverage_client_wrapper) {
 	ServiceException se;
 	se.errorCode = ErrorCode::SE_THRIFT_CONN_ERROR;
-	se.message = "Failed to connect";
+	se.message = "Connection failed";
 	throw se;
    }
 
